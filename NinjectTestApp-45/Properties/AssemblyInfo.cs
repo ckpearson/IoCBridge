@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("IoCBridge")]
+[assembly: AssemblyTitle("NinjectTestApp-45")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("IoCBridge")]
+[assembly: AssemblyProduct("NinjectTestApp-45")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("48096f79-98a0-457b-9328-fc121f8c9dc6")]
+[assembly: Guid("a9992221-ab4e-4258-9efd-e62d0a02e501")]
 
 // Version information for an assembly consists of the following four values:
 //

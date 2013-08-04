@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{99F96838-161E-4E81-B35A-22456652C85C}</ProjectGuid>
+    <ProjectGuid>{2B5A0471-FEBA-488C-AA3E-1E3DEDBFD96D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>IoCBridge</RootNamespace>
@@ -39,6 +39,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Binding.cs" />
+    <Compile Include="IIoC.cs" />
+    <Compile Include="IIoCBoostrapper.cs" />
+    <Compile Include="IIoCInjector.cs" />
+    <Compile Include="IoCBootstrapper.cs" />
+    <Compile Include="IoCInjector.cs" />
+    <Compile Include="NamedArg.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

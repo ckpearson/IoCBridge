@@ -1,13 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoCBridge", "IoCBridge\IoCBridge.csproj", "{99F96838-161E-4E81-B35A-22456652C85C}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C9AEF157-227C-4FF2-9024-E39FB63FDE4F}"
 	ProjectSection(SolutionItems) = preProject
 		LICENSE.txt = LICENSE.txt
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoCBridge-45", "IoCBridge-45\IoCBridge-45.csproj", "{2B5A0471-FEBA-488C-AA3E-1E3DEDBFD96D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoCBridge.Ninject-45", "IoCBridge.Ninject-45\IoCBridge.Ninject-45.csproj", "{6ECB76FE-7503-49DB-808E-6C59B2C0CC51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NinjectTestApp-45", "NinjectTestApp-45\NinjectTestApp-45.csproj", "{F192E20C-48BB-4F0F-B9BC-73B56560D452}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +19,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{99F96838-161E-4E81-B35A-22456652C85C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{99F96838-161E-4E81-B35A-22456652C85C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{99F96838-161E-4E81-B35A-22456652C85C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{99F96838-161E-4E81-B35A-22456652C85C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B5A0471-FEBA-488C-AA3E-1E3DEDBFD96D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B5A0471-FEBA-488C-AA3E-1E3DEDBFD96D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B5A0471-FEBA-488C-AA3E-1E3DEDBFD96D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B5A0471-FEBA-488C-AA3E-1E3DEDBFD96D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6ECB76FE-7503-49DB-808E-6C59B2C0CC51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ECB76FE-7503-49DB-808E-6C59B2C0CC51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ECB76FE-7503-49DB-808E-6C59B2C0CC51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ECB76FE-7503-49DB-808E-6C59B2C0CC51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F192E20C-48BB-4F0F-B9BC-73B56560D452}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F192E20C-48BB-4F0F-B9BC-73B56560D452}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F192E20C-48BB-4F0F-B9BC-73B56560D452}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F192E20C-48BB-4F0F-B9BC-73B56560D452}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
