@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace IoCBridge
 {
@@ -31,7 +29,8 @@ namespace IoCBridge
             {
                 lock (_bindings)
                 {
-                    var bnd = _bindings.SingleOrDefault(b => b.ServiceType.Equals(service));
+                    Binding bnd = null;
+                    bnd = _bindings.SingleOrDefault(b => b.ServiceType.Equals(service));
                     if (bnd == null)
                     {
                         _bindings.Add(binding);

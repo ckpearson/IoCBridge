@@ -13,6 +13,8 @@ namespace NinjectTestApp_45
             var bootstrap = new IoCBridge.Ninject.NinjectBootstrapper();
             bootstrap.Start();
 
+            bootstrap.Bind<ITest, EnglishTest>();
+
             var tst = bootstrap.Get<ITest>();
             Console.WriteLine(tst.SayHello("Clint"));
             Console.ReadLine();
