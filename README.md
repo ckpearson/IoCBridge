@@ -13,3 +13,22 @@ No. IoCBridge is a generic base for consuming an IoC framework, this is to allow
 
 # Is this compatible with my favourite framework?
 IoCBridge isn't directly compatible with any framework, but so long as the framework exposes common IoC functionality a wrapper can be written to add support.
+
+# How do I use it?
+Install the Nuget package: https://www.nuget.org/packages/IoCBridge/
+
+Once you've got the core IoCBridge package you can then begin creating your own boostrapper for your framework by deriving from `IoCBootstrapper`, or there may even be a wrapper Nuget package out there!
+
+## Current Wrappers:
+> Ninject - https://www.nuget.org/packages/IoCBridge.Ninject/ (https://github.com/ninject/ninject)
+
+## Getting up and running:
+Once you've installed your wrapper and the core, you can start using the system as such:
+
+```csharp
+var boot = new IoCBridge.Ninject.NinjectBootstrapper();
+boot.Start();
+boot.Bind<ISomething, Some>();
+
+ISomething a = boot.Get<ISomething>();
+```
