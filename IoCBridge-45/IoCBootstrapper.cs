@@ -147,13 +147,13 @@ namespace IoCBridge
             }
         }
 
-        protected abstract object DoGet(Type service, params NamedArg[] args);
-        public T Get<T>(params NamedArg[] args)
+        protected abstract object DoGet(Type service, params CtorArg[] args);
+        public T Get<T>(params CtorArg[] args)
         {
             return (T)DoGet(typeof(T), args);
         }
 
-        public object Get(Type serviceType, params NamedArg[] args)
+        public object Get(Type serviceType, params CtorArg[] args)
         {
             return DoGet(serviceType, args);
         }

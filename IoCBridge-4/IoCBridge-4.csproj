@@ -51,6 +51,9 @@
     <Compile Include="..\IoCBridge-45\Bindings\TypeBinding.cs">
       <Link>TypeBinding.cs</Link>
     </Compile>
+    <Compile Include="..\IoCBridge-45\CtorArg.cs">
+      <Link>CtorArg.cs</Link>
+    </Compile>
     <Compile Include="..\IoCBridge-45\IIoC.cs">
       <Link>IIoC.cs</Link>
     </Compile>
@@ -65,9 +68,6 @@
     </Compile>
     <Compile Include="..\IoCBridge-45\IoCInjector.cs">
       <Link>IoCInjector.cs</Link>
-    </Compile>
-    <Compile Include="..\IoCBridge-45\NamedArg.cs">
-      <Link>NamedArg.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

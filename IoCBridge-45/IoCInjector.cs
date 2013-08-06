@@ -3,20 +3,28 @@
 
 namespace IoCBridge
 {
+    /// <summary>
+    /// Injector provided to provider functions for retrieving args and other types
+    /// </summary>
     public sealed class IoCInjector : 
         IIoCInjector
     {
-        private readonly NamedArg[] _args = new NamedArg[] { };
+        private readonly CtorArg[] _args = new CtorArg[] { };
         private readonly IIoC _ioc;
 
-        public IoCInjector(IIoC ioc, params NamedArg[] args)
+        /// <summary>
+        /// Instantiates a new instance
+        /// </summary>
+        /// <param name="ioc">The IoC access instance</param>
+        /// <param name="args">The ctor arguments for this request</param>
+        public IoCInjector(IIoC ioc, params CtorArg[] args)
         {
-            if (args == null) args = new NamedArg[] { };
+            if (args == null) args = new CtorArg[] { };
 
             _ioc = ioc;
         }
 
-        public T Inject<T>(params NamedArg[] args)
+        public T Inject<T>(params CtorArg[] args)
         {
             return _ioc.Get<T>(args);
         }

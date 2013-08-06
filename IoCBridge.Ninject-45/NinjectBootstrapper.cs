@@ -51,9 +51,9 @@ namespace IoCBridge.Ninject
                 {
                     var injector = ((IIoC)this).Get<IIoCInjector>(new[]
                     {
-                        new NamedArg("ioc", this),
-                        new NamedArg("args", ctx.Parameters.Select(p =>
-                            new NamedArg(
+                        new CtorArg("ioc", this),
+                        new CtorArg("args", ctx.Parameters.Select(p =>
+                            new CtorArg(
                                 p.Name,
                                 p.GetValue(ctx, ctx.Request.Target))).ToArray()),
                     });
@@ -61,7 +61,7 @@ namespace IoCBridge.Ninject
                 });
         }
 
-        protected override object DoGet(Type service, params NamedArg[] args)
+        protected override object DoGet(Type service, params CtorArg[] args)
         {
             if (args == null || args.Length == 0)
             {

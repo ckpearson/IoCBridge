@@ -13,7 +13,7 @@ namespace IoCBridge
         /// <typeparam name="T">The service type to get an instance for</typeparam>
         /// <param name="args">The constructor arguments</param>
         /// <returns>The requested instance</returns>
-        T Get<T>(params NamedArg[] args);
+        T Get<T>(params CtorArg[] args);
 
         /// <summary>
         /// Gets an instance of the given type using the provided parameters
@@ -21,7 +21,7 @@ namespace IoCBridge
         /// <param name="serviceType">The service type to get an instance of</param>
         /// <param name="args">The constructor arguments</param>
         /// <returns>The requested instance</returns>
-        object Get(Type serviceType, params NamedArg[] args);
+        object Get(Type serviceType, params CtorArg[] args);
 
         /// <summary>
         /// Gets whether a given service type has a binding

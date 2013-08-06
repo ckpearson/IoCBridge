@@ -48,7 +48,7 @@
     <Compile Include="IIoCInjector.cs" />
     <Compile Include="IoCBootstrapper.cs" />
     <Compile Include="IoCInjector.cs" />
-    <Compile Include="NamedArg.cs" />
+    <Compile Include="CtorArg.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
