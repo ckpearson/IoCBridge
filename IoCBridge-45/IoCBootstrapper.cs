@@ -5,17 +5,28 @@ using System.Linq;
 
 namespace IoCBridge
 {
+    /// <summary>
+    /// Abstract base class for providing bootstrappers for use by the bridge
+    /// </summary>
     public abstract class IoCBootstrapper :
         IIoCBoostrapper,
         IIoC
     {
         private readonly List<Binding> _bindings = new List<Binding>();
 
+        /// <summary>
+        /// Instantiates a new instance
+        /// </summary>
         public IoCBootstrapper()
         {
 
         }
 
+        /// <summary>
+        /// Adds a given binding for a service type or replaces an existing binding
+        /// </summary>
+        /// <param name="service">The service type</param>
+        /// <param name="binding">The associated binding</param>
         private void addOrReplaceBinding(Type service, Binding binding)
         {
             if (service == null) throw new ArgumentNullException("Service type needed");
@@ -48,7 +59,14 @@ namespace IoCBridge
             }
         }
 
+        /// <summary>
+        /// When overridden in a derived class allows startup logic to be executed
+        /// </summary>
         protected abstract void OnStart();
+
+        /// <summary>
+        /// When overridden in a derived class allows initialisation logic to be executed
+        /// </summary>
         protected abstract void OnInitialise();
 
         public void Start()
@@ -62,6 +80,12 @@ namespace IoCBridge
             OnStart();
         }
 
+        /// <summary>
+        /// When overridden in a derived class allows handling of type binding requests
+        /// </summary>
+        /// <param name="service">The service type to be bound</param>
+        /// <param name="implementation">The implementation type to be bound to</param>
+        /// <param name="singleton">Whether the binding should be for an eventual singleton</param>
         protected abstract void DoBind(Type service, Type implementation, bool singleton);
 
         public void Bind(Type service, Type implementation)
@@ -104,13 +128,18 @@ namespace IoCBridge
             }
         }
 
-        protected abstract void DoBindConstant(Type service, object instance);
-        public void BindConstant(Type service, object instance)
+        /// <summary>
+        /// When overridden in a derived class allows handling of constant binding requests
+        /// </summary>
+        /// <param name="service">The service type to be bound</param>
+        /// <param name="constant">The constant to be bound to</param>
+        protected abstract void DoBindConstant(Type service, object constant);
+        public void BindConstant(Type service, object constant)
         {
             lock (_bindings)
             {
-                var bnd = new ConstantBinding(service, instance);
-                DoBindConstant(bnd.ServiceType, instance);
+                var bnd = new ConstantBinding(service, constant);
+                DoBindConstant(bnd.ServiceType, constant);
                 addOrReplaceBinding(bnd.ServiceType, bnd);
             }
         }
@@ -125,6 +154,11 @@ namespace IoCBridge
             }
         }
 
+        /// <summary>
+        /// When overridden in a derived class allows handling of provider function binding requests
+        /// </summary>
+        /// <param name="service">The service type to be bound</param>
+        /// <param name="func">The provider function to be bound to</param>
         protected abstract void DoBindFunc(Type service, Func<IIoCInjector, object> func);
 
         public void BindToFunction(Type service, Func<IIoCInjector, object> func)
@@ -147,6 +181,12 @@ namespace IoCBridge
             }
         }
 
+        /// <summary>
+        /// When overridden in a dervived class allows handling of IoC get requests
+        /// </summary>
+        /// <param name="service">The service type to get an instance for</param>
+        /// <param name="args">The constructor arguments</param>
+        /// <returns>The requested instance</returns>
         protected abstract object DoGet(Type service, params CtorArg[] args);
         public T Get<T>(params CtorArg[] args)
         {
@@ -158,6 +198,11 @@ namespace IoCBridge
             return DoGet(serviceType, args);
         }
 
+        /// <summary>
+        /// When overridden in a derived class allows handling of IoC type-bound check requests
+        /// </summary>
+        /// <param name="serviceType">The service type to check for the existence of a binding</param>
+        /// <returns><c>True</c> if a binding exists, <c>False</c> otherwise</returns>
         protected abstract bool DoIsTypeBound(Type serviceType);
         public bool IsTypeBound<T>()
         {
