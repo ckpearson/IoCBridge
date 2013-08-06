@@ -39,8 +39,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\IoCBridge-45\Binding.cs">
+    <Compile Include="..\IoCBridge-45\Bindings\Binding.cs">
       <Link>Binding.cs</Link>
+    </Compile>
+    <Compile Include="..\IoCBridge-45\Bindings\ConstantBinding.cs">
+      <Link>ConstantBinding.cs</Link>
+    </Compile>
+    <Compile Include="..\IoCBridge-45\Bindings\FuncBinding.cs">
+      <Link>FuncBinding.cs</Link>
+    </Compile>
+    <Compile Include="..\IoCBridge-45\Bindings\TypeBinding.cs">
+      <Link>TypeBinding.cs</Link>
     </Compile>
     <Compile Include="..\IoCBridge-45\IIoC.cs">
       <Link>IIoC.cs</Link>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IoCBridge.Bindings;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -52,6 +53,8 @@ namespace IoCBridge
 
         public void Start()
         {
+            OnInitialise();
+
             DoBindConstant(typeof(IIoC), this);
             DoBindConstant(typeof(IIoCBoostrapper), this);
             DoBind(typeof(IIoCInjector), typeof(IoCInjector), false);

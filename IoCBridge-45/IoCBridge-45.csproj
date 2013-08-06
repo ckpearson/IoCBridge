@@ -39,7 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Binding.cs" />
+    <Compile Include="Bindings\Binding.cs" />
+    <Compile Include="Bindings\ConstantBinding.cs" />
+    <Compile Include="Bindings\FuncBinding.cs" />
+    <Compile Include="Bindings\TypeBinding.cs" />
     <Compile Include="IIoC.cs" />
     <Compile Include="IIoCBoostrapper.cs" />
     <Compile Include="IIoCInjector.cs" />
