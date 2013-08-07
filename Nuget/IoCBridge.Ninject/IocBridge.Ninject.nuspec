@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>IoCBridge.Ninject</id>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <authors>Clint Pearson</authors>
     <owners>Clint Pearson</owners>
     <!--<licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>-->
@@ -10,7 +10,7 @@
     <!--<iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>-->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>IoCBridge Ninject wrapper.</description>
-    <releaseNotes>Initial Release.</releaseNotes>
+    <releaseNotes>Added XML comments.</releaseNotes>
     <copyright>Copyright 2013 Clint Pearson</copyright>
     <tags>iocbridge ioc di ninject</tags>
     <dependencies>

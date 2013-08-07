@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>IoCBridge</id>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <authors>Clint Pearson</authors>
     <owners>Clint Pearson</owners>
     <!--<licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>-->
@@ -10,7 +10,7 @@
     <!--<iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>-->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A simple library allowing you to add generic IoC support to your library or app.</description>
-    <releaseNotes>Initial release.</releaseNotes>
+    <releaseNotes>Added XML comments and bootstrappers now have initialisation handling.</releaseNotes>
     <copyright>Copyright 2013 Clint Pearson</copyright>
     <tags>IoC library di dependency-injection</tags>
     <dependencies>
