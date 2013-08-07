@@ -32,3 +32,8 @@ boot.Bind<ISomething, Some>();
 
 ISomething a = boot.Get<ISomething>();
 ```
+
+## Isn't this CommonServiceLocator?
+Essentially yes, I discovered CommonServiceLocator after starting this project. CSL is geared to supporting the anti-pattern that is Service Location. IoCBridge can be made to do so as well, but it's created with IoC in mind first and foremost.
+
+There's also the potential for further extension, an example would be auto resolution of constructor arguments, IoC factory writers rejoice!
