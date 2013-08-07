@@ -5,6 +5,9 @@ using System.Linq;
 
 namespace IoCBridge.Ninject
 {
+    /// <summary>
+    /// IoCBridge bootstrapper for the Ninject IoC framework
+    /// </summary>
     public sealed class NinjectBootstrapper
         : IoCBootstrapper
     {
